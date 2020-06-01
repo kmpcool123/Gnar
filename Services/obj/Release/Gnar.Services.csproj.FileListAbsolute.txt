@@ -1,0 +1,15 @@
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Services.dll.config
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Services.dll
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Services.pdb
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\EntityFramework.dll
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\EntityFramework.SqlServer.dll
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Microsoft.AspNet.Identity.Core.dll
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\EntityFramework.xml
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\EntityFramework.SqlServer.xml
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Microsoft.AspNet.Identity.Core.xml
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\obj\Release\Gnar.Services.csprojAssemblyReference.cache
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\obj\Release\Gnar.Services.csproj.CopyComplete
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\obj\Release\Services.dll
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\obj\Release\Services.pdb
