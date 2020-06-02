@@ -7,23 +7,33 @@ using System.Threading.Tasks;
 
 namespace Gnar.Data
 {
-    public class Deck
+    public class Trucks
     {
-        [Key]
-        public int DeckId{ get;set;}
         [Required]
-        public string DeckName { get; set; }
-        public string Brand { get; set; }
+        public Guid OwnerId { get; set; }
+        [Key]
+        public int TruckId { get; set; }
+
+        [Required]
+        [MinLength(1)]
+        [MaxLength(100)]
+        [Display(Name = "Truck Name")]
+        public string TruckName { get; set; }
+
         public decimal Size { get; set; }
+
+        
+        [MaxLength(100)] 
+        [Display(Name ="Pro-Model")]
         public string ProModel { get; set; }
-        public string Shape { get; set; }
-        public decimal WheelBase { get; set; }
+
+        public decimal Weight { get; set; }
+
         public string Color { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }
 
         public DateTimeOffset? ModifiedUtc { get; set; }
-
     }
 }

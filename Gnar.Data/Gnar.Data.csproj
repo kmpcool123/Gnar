@@ -54,14 +54,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Bearings.cs" />
-    <Compile Include="Deck.cs" />
-    <Compile Include="GripTape.cs" />
-    <Compile Include="HardWare.cs" />
+    <Compile Include="Entities\Bearings.cs" />
+    <Compile Include="Entities\Deck.cs" />
+    <Compile Include="Entities\GripTape.cs" />
+    <Compile Include="Entities\HardWare.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Trucks.cs" />
-    <Compile Include="Wheels.cs" />
+    <Compile Include="Entities\Trucks.cs" />
+    <Compile Include="Entities\Wheels.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
