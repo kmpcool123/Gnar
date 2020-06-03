@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -15,8 +16,7 @@ namespace Gnar.Data
         public int GripTapeId { get; set; }
         
         [Required]
-        [MinLength (1)]
-        [MaxLength(100)]
+        
         [Display (Name ="GripTape Name")]
         public string GripTapeName { get; set; }
         
@@ -26,13 +26,16 @@ namespace Gnar.Data
         [Required]
         public decimal Length { get; set; }
 
-        [MaxLength(100)]
+        [Display(Name ="Pro-Model")]
         public string ProModel { get; set; }
         
         public string Color { get; set; }
 
-        [MaxLength(100)]
+        
         public string Brand { get; set; }
+
+        [DefaultValue(false)]
+        public bool IsStarred { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -15,15 +16,22 @@ namespace Gnar.Data
         public int HardWareId { get; set; }
 
         [Required]
-        [MinLength(1)]
-        [MaxLength(100)]
         [Display(Name = "HardWare Name")]
         public string HardWareName { get; set; }
 
-        [Required]
+        [Display(Name ="Pro-Model")]
+        public string ProModel { get; set; }
+
+        
+        public string Brand { get; set; }
+
+        
         public decimal Size { get; set; }
 
         public string Color { get; set; }
+        
+        [DefaultValue(false)]
+        public bool IsStarred { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -13,15 +14,13 @@ namespace Gnar.Data
         public Guid OwnerId { get; set; }
         [Key]
         public int BearingId { get; set; }
+        
         [Required]
-        [MinLength (1)]
-        [MaxLength(100)]
         [Display(Name = "Bearing Name")]
         public string BearingName { get; set; }
 
-        [Display(Name = "Brand Name")]
-        [MaxLength(100)]
-        public string BrandName { get; set; }
+        
+        public string Brand { get; set; }
 
         [Display(Name = "Abec Rating")]
         public int AbecRating { get; set; }
@@ -29,9 +28,12 @@ namespace Gnar.Data
 
         [Display(Name = "Pro-Model")]
         
-        [MaxLength(100)]
-        public int ProModel { get; set; }
+        public string ProModel { get; set; }
+
         public string Color { get; set; }
+
+        [DefaultValue(false)]
+        public bool IsStarred { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }

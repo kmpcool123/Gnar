@@ -28,3 +28,5 @@ C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Debug\Gnar.Data.csprojAssemblyRefer
 C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Debug\Gnar.Data.csproj.CopyComplete
 C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Debug\Gnar.Data.dll
 C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Debug\Gnar.Data.pdb
+C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Debug\Gnar.Data.Migrations.initialMigration.resources
+C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Debug\Gnar.Data.csproj.GenerateResource.cache
