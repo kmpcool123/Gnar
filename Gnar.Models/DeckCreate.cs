@@ -12,7 +12,7 @@ namespace Gnar.Models
         [Required]
         [MinLength(2, ErrorMessage = "At least 2 characters.")]
         [MaxLength(100, ErrorMessage = "Woah there, too many characters.")]
-
+        [Display(Name ="Deck Name")]
         public string DeckName { get; set; }
 
         [MaxLength(100, ErrorMessage = "Woah there, too many characters.")]
@@ -33,9 +33,11 @@ namespace Gnar.Models
         [MaxLength(100, ErrorMessage = "Woah there, too many characters.")]
         public string Color { get; set; }
 
-        
 
-        
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUtc { get; set; }
+
+        public DateTimeOffset? ModifiedUtc { get; set; }
 
     }
 }

@@ -65,7 +65,7 @@ namespace Services
             }
         }
 
-        public DeckDetail GetDeckById(int id)
+        public DeckDetails GetDeckById(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -74,7 +74,7 @@ namespace Services
                         .Decks
                         .Single(e => e.DeckId == id && e.OwnerId == _userId);
                 return
-                    new DeckDetail
+                    new DeckDetails
                     {
                         DeckId = entity.DeckId,
                         DeckName = entity.DeckName,
@@ -87,6 +87,29 @@ namespace Services
                         CreatedUtc = entity.CreatedUtc,
                         ModifiedUtc = entity.ModifiedUtc
                     };
+            }
+        }
+
+        public bool UpdateDeck(DeckEdit model)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Decks
+                        .Single(e => e.DeckId == model.DeckId && e.OwnerId == _userId);
+
+                entity.DeckId = entity.DeckId;
+                entity.DeckName = entity.DeckName;
+                entity.Shape = entity.Shape;
+                entity.Brand = entity.Brand;
+                entity.ProModel = entity.ProModel;
+                entity.Size = entity.Size;
+                entity.Color = entity.Color;
+                entity.WheelBase = entity.WheelBase;
+                entity.ModifiedUtc = entity.ModifiedUtc;
+
+                return ctx.SaveChanges() == 1;
             }
         }
     }

@@ -65,6 +65,49 @@ namespace Gnar.MVC.Controllers
             return service;
         }
 
-        
+        public ActionResult Edit(int id)
+        {
+            var service = CreateDeckService();
+            var detail = service.GetDeckById(id);
+            var model =
+                new DeckEdit
+                {
+                    DeckId = detail.DeckId,
+                    DeckName = detail.DeckName,
+                    Shape = detail.Shape,
+                    Brand = detail.Brand,
+                    ProModel = detail.ProModel,
+                    Size = detail.Size,
+                    Color = detail.Color,
+                    WheelBase = detail.WheelBase,
+                    
+                    ModifiedUtc =detail.ModifiedUtc
+                };
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(int id, DeckEdit model)
+        {
+            if (!ModelState.IsValid) return View(model);
+
+            if (model.DeckId != id)
+            {
+                ModelState.AddModelError("", "Id Mismatch");
+                return View(model);
+            }
+
+            var service = CreateDeckService();
+
+            if (service.UpdateDeck(model))
+            {
+                TempData["SaveResult"] = "Your Deck has been updated.";
+                return RedirectToAction("Index");
+            }
+
+            ModelState.AddModelError("", "Your note could not be updated.");
+            return View(model);
+        }
     }
 }

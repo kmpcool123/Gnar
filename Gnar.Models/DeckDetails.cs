@@ -9,6 +9,7 @@ namespace Gnar.Models
 {
     public class DeckDetails
     {
+        public int DeckId { get; set; }
         
         [Display(Name ="Deck Name")]
         public string DeckName { get; set; }

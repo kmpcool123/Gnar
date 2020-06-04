@@ -7,36 +7,35 @@ using System.Threading.Tasks;
 
 namespace Gnar.Models
 {
-    public class DeckDetail
+    public class DeckEdit
     {
         public int DeckId { get; set; }
 
-        
+        [MinLength(2, ErrorMessage = "At least 2 characters.")]
+        [MaxLength(100, ErrorMessage = "Woah there, too many characters.")]
         [Display(Name = "Deck Name")]
-
         public string DeckName { get; set; }
 
-
+        [MaxLength(100, ErrorMessage = "Woah there, too many characters.")]
         public string Brand { get; set; }
 
         public decimal Size { get; set; }
 
         [Display(Name = "Pro-Model")]
-
+        [MaxLength(100, ErrorMessage = "Woah there, too many characters.")]
         public string ProModel { get; set; }
 
-
+        [MaxLength(50, ErrorMessage = "Woah there, too many characters.")]
         public string Shape { get; set; }
 
         [Display(Name = "Wheel Base")]
         public decimal WheelBase { get; set; }
 
+        [MaxLength(100, ErrorMessage = "Woah there, too many characters.")]
         public string Color { get; set; }
 
-        [Display(Name = "Made")]
-        public DateTimeOffset CreatedUtc { get; set; }
-
-        [Display(Name = "Made")]
+        
+        [Display(Name ="Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
     }
 }
