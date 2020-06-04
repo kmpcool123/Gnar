@@ -38,8 +38,6 @@ namespace Gnar.Data
 
         public string Color { get; set; }
 
-        [DefaultValue(false)]
-        public bool IsStarred { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUtc { get; set; }

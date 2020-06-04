@@ -13,3 +13,5 @@ C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\bin\Release\Microsoft.AspNet.Identity.E
 C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Release\Gnar.Data.csproj.CopyComplete
 C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Release\Gnar.Data.dll
 C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Release\Gnar.Data.pdb
+C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Release\Gnar.Data.Migrations.initialMigration.resources
+C:\Eleven-Fifty\Red-Badge\Gnar\Gnar.Data\obj\Release\Gnar.Data.csproj.GenerateResource.cache

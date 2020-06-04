@@ -56,8 +56,7 @@ namespace Services
                                 new DeckListItem
                                 {
                                     DeckId = e.DeckId,
-                                    DeckName = e.DeckName,
-                                    IsStarred = e.IsStarred,
+                                    DeckName = e.DeckName,                                    
                                     CreatedUtc = e.CreatedUtc
                                 }
                         );

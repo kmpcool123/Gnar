@@ -13,3 +13,9 @@ C:\Eleven-Fifty\Red-Badge\Gnar\Services\obj\Release\Gnar.Services.csprojAssembly
 C:\Eleven-Fifty\Red-Badge\Gnar\Services\obj\Release\Gnar.Services.csproj.CopyComplete
 C:\Eleven-Fifty\Red-Badge\Gnar\Services\obj\Release\Services.dll
 C:\Eleven-Fifty\Red-Badge\Gnar\Services\obj\Release\Services.pdb
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Gnar.Data.dll
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Gnar.Models.dll
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Gnar.Data.pdb
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Gnar.Data.dll.config
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Gnar.Models.pdb
+C:\Eleven-Fifty\Red-Badge\Gnar\Services\bin\Release\Gnar.Models.dll.config
