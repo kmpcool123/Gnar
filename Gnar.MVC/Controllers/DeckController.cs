@@ -109,5 +109,14 @@ namespace Gnar.MVC.Controllers
             ModelState.AddModelError("", "Your note could not be updated.");
             return View(model);
         }
+
+        [ActionName("Delete")]
+        public ActionResult Delete(int id)
+        {
+            var svc = CreateDeckService();
+            var model = svc.GetDeckById(id);
+
+            return View(model);
+        }
     }
 }

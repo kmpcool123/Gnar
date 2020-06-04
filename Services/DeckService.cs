@@ -112,5 +112,20 @@ namespace Services
                 return ctx.SaveChanges() == 1;
             }
         }
+
+        public bool DeleteDeck(int deckId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Decks
+                        .Single(e => e.DeckId == deckId && e.OwnerId == _userId);
+
+                ctx.Decks.Remove(entity);
+
+                return ctx.SaveChanges() == 1;
+            }
+        }
     }
 }
