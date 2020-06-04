@@ -1,6 +1,5 @@
-﻿using Gnar.Models;
+﻿using Gnar.Models.BearingsModel;
 using Microsoft.AspNet.Identity;
-using Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,17 +8,17 @@ using System.Web.Mvc;
 
 namespace Gnar.MVC.Controllers
 {
-    public class DeckController : Controller
+    public class BearingsController : Controller
     {
         [Authorize]
         // GET: Deck
         public ActionResult Index()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new DeckService(userId);
-            var model = service.GetDecks();
+            var service = new BearingsService(userId);
+            var model = service.GetBearings();
             return View(model);
-            
+
         }
 
         //GET
@@ -30,22 +29,22 @@ namespace Gnar.MVC.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(DeckCreate model)
+        public ActionResult Create(BearingsCreate model)
         {
             if (!ModelState.IsValid)
             {
                 return View(model);
             }
 
-            var service = CreateDeckService();
+            var service = CreateBearingsService();
 
-            if(service.CreateDeck(model))
+            if (service.CreateBearings(model))
             {
-                TempData["SaveResult"] = "Deck Made!";
+                TempData["SaveResult"] = "Bearings Made!";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Deck could not be Made :(");
+            ModelState.AddModelError("", "Bearings could not be Made :(");
 
             return View(model);
         }
@@ -58,63 +57,63 @@ namespace Gnar.MVC.Controllers
             return View(model);
         }
 
-        private DeckService CreateDeckService()
+        private BearingsService CreateBearingsService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var service = new DeckService(userId);
+            var service = new BearingsService(userId);
             return service;
         }
 
         public ActionResult Edit(int id)
         {
-            var service = CreateDeckService();
-            var detail = service.GetDeckById(id);
+            var service = CreateBearingsService();
+            var detail = service.GetBearingsById(id);
             var model =
-                new DeckEdit
+                new BearingsEdit
                 {
-                    DeckId = detail.DeckId,
-                    DeckName = detail.DeckName,
-                    Shape = detail.Shape,
+                    BearingId = detail.BearingId,
+                    BearingName = detail.BearingName,
+                    AbecRating = detail.AbecRating,
                     Brand = detail.Brand,
                     ProModel = detail.ProModel,
-                    Size = detail.Size,
+                    Type = detail.Type,
                     Color = detail.Color,
-                    WheelBase = detail.WheelBase,
                     
-                    ModifiedUtc =detail.ModifiedUtc
+
+                    ModifiedUtc = detail.ModifiedUtc
                 };
             return View(model);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(int id, DeckEdit model)
+        public ActionResult Edit(int id, BearingsEdit model)
         {
             if (!ModelState.IsValid) return View(model);
 
-            if (model.DeckId != id)
+            if (model.BearingId != id)
             {
                 ModelState.AddModelError("", "Id Mismatch");
                 return View(model);
             }
 
-            var service = CreateDeckService();
+            var service = CreateBearingsService();
 
-            if (service.UpdateDeck(model))
+            if (service.UpdateBearings(model))
             {
-                TempData["SaveResult"] = "Your Deck has been updated.";
+                TempData["SaveResult"] = "Your Bearings have been updated.";
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your Deck couldn't be updated.");
+            ModelState.AddModelError("", "Your Bearings couldn't be updated.");
             return View(model);
         }
 
         [ActionName("Delete")]
         public ActionResult Delete(int id)
         {
-            var svc = CreateDeckService();
-            var model = svc.GetDeckById(id);
+            var svc = CreateBearingsService();
+            var model = svc.GetBearingsById(id);
 
             return View(model);
         }
@@ -122,13 +121,13 @@ namespace Gnar.MVC.Controllers
         [HttpPost]
         [ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteDeck(int id)
+        public ActionResult DeleteBearings(int id)
         {
-            var service = CreateDeckService();
+            var service = CreateBearingsService();
 
-            service.DeleteDeck(id);
+            service.DeleteBearings(id);
 
-            TempData["SaveResult"] = "Your Deck has been deleted";
+            TempData["SaveResult"] = "Your Bearings have been deleted";
 
             return RedirectToAction("Index");
         }

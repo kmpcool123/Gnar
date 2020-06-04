@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Gnar.Models.BearingsModel.BearingsListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.BearingId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BearingName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IsStarred)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CreatedUtc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.BearingId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BearingName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IsStarred)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CreatedUtc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.BearingId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.BearingId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.BearingId })
+        </td>
+    </tr>
+}
+
+</table>

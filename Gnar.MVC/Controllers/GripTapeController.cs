@@ -1,7 +1,4 @@
-﻿using Gnar.Models;
-using Microsoft.AspNet.Identity;
-using Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,7 +6,7 @@ using System.Web.Mvc;
 
 namespace Gnar.MVC.Controllers
 {
-    public class DeckController : Controller
+    public class GripTapeController : Controller
     {
         [Authorize]
         // GET: Deck
@@ -17,9 +14,9 @@ namespace Gnar.MVC.Controllers
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
             var service = new DeckService(userId);
-            var model = service.GetDecks();
+            var model = new DeckListItem[0];
             return View(model);
-            
+
         }
 
         //GET
@@ -39,7 +36,7 @@ namespace Gnar.MVC.Controllers
 
             var service = CreateDeckService();
 
-            if(service.CreateDeck(model))
+            if (service.CreateDeck(model))
             {
                 TempData["SaveResult"] = "Deck Made!";
                 return RedirectToAction("Index");
@@ -80,8 +77,8 @@ namespace Gnar.MVC.Controllers
                     Size = detail.Size,
                     Color = detail.Color,
                     WheelBase = detail.WheelBase,
-                    
-                    ModifiedUtc =detail.ModifiedUtc
+
+                    ModifiedUtc = detail.ModifiedUtc
                 };
             return View(model);
         }
