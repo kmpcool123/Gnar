@@ -54,12 +54,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="DeckService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gnar.Data\Gnar.Data.csproj">
+      <Project>{14B17967-41DB-4D0E-A3B5-C8DB5406F77A}</Project>
+      <Name>Gnar.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gnar.Models\Gnar.Models.csproj">
+      <Project>{C0B86FE6-9047-4F13-8BD8-A8E3332D8EB2}</Project>
+      <Name>Gnar.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

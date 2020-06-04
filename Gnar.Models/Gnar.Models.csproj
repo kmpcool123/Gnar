@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DeckCreate.cs" />
+    <Compile Include="DeckDetail.cs" />
     <Compile Include="DeckListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
