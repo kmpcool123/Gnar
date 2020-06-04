@@ -5,18 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gnar.Models
+namespace Gnar.Models.GriptapesModel
 {
-    public class DeckListItem
+    public class GripTapeListItem
     {
-        public int DeckId { get; set; }
+        public int GripTapeId { get; set; }
 
 
-        [Display (Name = "Deck Name")]
-        public string DeckName { get; set; }
+        [Display(Name = "GripTape Name")]
+        public string GripTapeName { get; set; }
+        
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
-
     }
 }

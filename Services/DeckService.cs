@@ -57,6 +57,7 @@ namespace Services
                                 {
                                     DeckId = e.DeckId,
                                     DeckName = e.DeckName,
+                                    IsStarred = e.IsStarred,
                                     CreatedUtc = e.CreatedUtc
                                 }
                         );

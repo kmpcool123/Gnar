@@ -54,10 +54,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeckCreate.cs" />
-    <Compile Include="DeckDetails.cs" />
-    <Compile Include="DeckEdit.cs" />
-    <Compile Include="DeckListItem.cs" />
+    <Compile Include="GripTapeModel\GripTapeEdit.cs" />
+    <Compile Include="GripTapeModel\GripTapeListItem.cs" />
+    <Compile Include="GripTapeModel\GripTapeCreate.cs" />
+    <Compile Include="GripTapeModel\GripTapeDetail.cs" />
+    <Compile Include="TrucksModel\TrucksEdit.cs" />
+    <Compile Include="TrucksModel\TrucksListItem.cs" />
+    <Compile Include="TrucksModel\TrucksCreate.cs" />
+    <Compile Include="TrucksModel\TrucksDetail.cs" />
+    <Compile Include="WheelsModel\WheelsEdit.cs" />
+    <Compile Include="WheelsModel\WheelsListItem.cs" />
+    <Compile Include="WheelsModel\WheelsCreate.cs" />
+    <Compile Include="WheelsModel\WheelsDetail.cs" />
+    <Compile Include="HardWareModel\HardWareEdit.cs" />
+    <Compile Include="HardWareModel\HardWareListItem.cs" />
+    <Compile Include="HardWareModel\HardWareCreate.cs" />
+    <Compile Include="HardWareModel\HardWareDetail.cs" />
+    <Compile Include="CompletesModel\CompletesEdit.cs" />
+    <Compile Include="CompletesModel\CompletesListItem.cs" />
+    <Compile Include="CompletesModel\CompletesCreate.cs" />
+    <Compile Include="CompletesModel\CompletesDetail.cs" />
+    <Compile Include="BearingsModel\BearingsEdit.cs" />
+    <Compile Include="BearingsModel\BearingsListItem.cs" />
+    <Compile Include="BearingsModel\BearingsCreate.cs" />
+    <Compile Include="BearingsModel\BearingsDetail.cs" />
+    <Compile Include="DeckModels\DeckCreate.cs" />
+    <Compile Include="DeckModels\DeckDetails.cs" />
+    <Compile Include="DeckModels\DeckEdit.cs" />
+    <Compile Include="DeckModels\DeckListItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

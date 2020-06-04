@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Bearings.cs" />
+    <Compile Include="Entities\Completes.cs" />
     <Compile Include="Entities\Deck.cs" />
     <Compile Include="Entities\GripTape.cs" />
     <Compile Include="Entities\HardWare.cs" />

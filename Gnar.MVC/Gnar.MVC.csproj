@@ -171,6 +171,7 @@
     <Compile Include="Controllers\DeckController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TrucksController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -213,8 +214,6 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
@@ -241,9 +240,16 @@
     <Content Include="Views\Deck\Details.cshtml" />
     <Content Include="Views\Deck\Edit.cshtml" />
     <Content Include="Views\Deck\Delete.cshtml" />
+    <Content Include="Views\Shared\Display\DateTimeOffset.cshtml" />
+    <Content Include="Views\Trucks\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Bearings\" />
+    <Folder Include="Views\Completes\" />
+    <Folder Include="Views\GripTape\" />
+    <Folder Include="Views\HardWare\" />
+    <Folder Include="Views\Wheels\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -271,6 +277,9 @@
       <Project>{f22e08e5-79e0-4f6e-b5ad-b2f7a9164759}</Project>
       <Name>Gnar.Services</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

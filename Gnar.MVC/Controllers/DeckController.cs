@@ -106,7 +106,7 @@ namespace Gnar.MVC.Controllers
                 return RedirectToAction("Index");
             }
 
-            ModelState.AddModelError("", "Your note could not be updated.");
+            ModelState.AddModelError("", "Your Deck couldn't be updated.");
             return View(model);
         }
 
@@ -117,6 +117,20 @@ namespace Gnar.MVC.Controllers
             var model = svc.GetDeckById(id);
 
             return View(model);
+        }
+
+        [HttpPost]
+        [ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public ActionResult DeleteDeck(int id)
+        {
+            var service = CreateDeckService();
+
+            service.DeleteDeck(id);
+
+            TempData["SaveResult"] = "Your Deck has been deleted";
+
+            return RedirectToAction("Index");
         }
     }
 }
